@@ -1,0 +1,106 @@
+#fake-captcha {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Questrial";
+  font-size: 4vw;
+  line-height: 4.25vw;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #444;
+}
+#logo {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Questrial";
+  font-size: 4vw;
+  line-height: 4.25vw;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #444;
+}
+#footer-text {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Questrial";
+  font-size: 1.5vw;
+  line-height: 4.25vw;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #444;
+}
+
+#fake-captcha:hover {
+  color: #666;
+}
+
+#fake-checkbox {
+  position: relative;
+  float: left;
+  margin-right: 1vw;
+  width: 4vw;
+  height: 4vw;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+#fake-checkbox:hover {
+  border-color: #aaa;
+  background: #eee;
+}
+
+#fake-captcha.loading {
+  cursor: default;
+  color: #444;
+}
+
+.loading #fake-checkbox {
+  border-radius: 50%;
+  background: transparent;
+  border-color: #888;
+  border-width: 12px;
+  border-style: inset;
+  animation: spin 1s infinite linear;
+}
+
+.pass #fake-checkbox {
+  background: #c1d9a3;
+  border-color: #669f56;
+}
+
+.pass #fake-checkbox:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "\2713";
+  font-size: 6vw;
+  color: #275f18;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.fail {
+  animation: fail 0.1s 4;
+}
+
+@keyframes fail {
+  0% { transform: translate(-50%, -50%); }
+  25% { transform: translate(-51%, -50%); }
+  50% { transform: translate(-50%, -50%); }
+  75% { transform: translate(-49%, -50%); }
+  100% { transform: translate(-50%, -50%); }
+}
